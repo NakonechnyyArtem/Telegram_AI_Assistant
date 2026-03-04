@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: pgvector/pgvector:pg15
+    container_name: course_db
+    environment:
+      POSTGRES_DB: mybot_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: artemka_2
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pg_data:

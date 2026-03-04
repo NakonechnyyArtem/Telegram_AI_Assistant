@@ -1,0 +1,10 @@
+aiogram>=3.0
+asyncpg
+sqlalchemy
+aiofiles
+aiohttp
+pydantic-settings
+python-dotenv
+pytest
+pytest-asyncio
+httpx
