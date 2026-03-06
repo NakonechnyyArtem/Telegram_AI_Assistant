@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="527723f5-bcdd-4e9a-85b7-8bdf7a8d620a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bot/middlewares/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/states.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/help.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/inline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handlers/upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/file_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_db_check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bot/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/keyboards/inline.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/keyboards/inline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1772638942878</updated>
       <workItem from="1772638943922" duration="10877000" />
-      <workItem from="1772810044003" duration="7432000" />
+      <workItem from="1772810044003" duration="9734000" />
     </task>
     <servers />
   </component>

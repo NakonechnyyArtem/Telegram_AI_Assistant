@@ -6,7 +6,8 @@ def get_main_menu() -> InlineKeyboardMarkup:
     builder.button(text="Помощь", callback_data="help")
     builder.button(text="Настройки", callback_data="settings")
     builder.button(text="Статистика", callback_data="stats")
-    builder.adjust(2, 1)
+    builder.button(text="📁 Загрузить файл", callback_data="upload")
+    builder.adjust(2, 2)
     return builder.as_markup()
 
 def get_settings_menu() -> InlineKeyboardMarkup:

@@ -80,6 +80,38 @@ class Database:
                                    );
                                """)
 
+            await conn.execute("""
+                               CREATE TABLE IF NOT EXISTS uploaded_files
+                               (
+                                   id
+                                   SERIAL
+                                   PRIMARY
+                                   KEY,
+                                   user_id
+                                   BIGINT
+                                   REFERENCES
+                                   users
+                               (
+                                   user_id
+                               ),
+                                   filename VARCHAR
+                               (
+                                   255
+                               ),
+                                   file_type VARCHAR
+                               (
+                                   50
+                               ),
+                                   file_size BIGINT,
+                                   file_path VARCHAR
+                               (
+                                   500
+                               ),
+                                   extracted_text TEXT,
+                                   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                                   );
+                               """)
+
             print("Таблицы созданы")
 
     async def add_user(self, user_id: int, username: str, first_name: str):
@@ -101,4 +133,25 @@ class Database:
                 user_id
             )
 
+    async def save_file(self, user_id: int, filename: str, file_type: str,
+                        file_size: int, file_path: str, extracted_text: str = None):
+        async with self.pool.acquire() as conn:
+            await conn.execute(
+                """
+                INSERT INTO uploaded_files
+                    (user_id, filename, file_type, file_size, file_path, extracted_text)
+                VALUES ($1, $2, $3, $4, $5, $6)
+                """,
+                user_id, filename, file_type, file_size, file_path, extracted_text
+            )
+
+    async def get_user_files(self, user_id: int):
+        async with self.pool.acquire() as conn:
+            return await conn.fetch(
+                "SELECT * FROM uploaded_files WHERE user_id = $1 ORDER BY created_at DESC",
+                user_id
+            )
+
 db = Database()
+
+bot=None
