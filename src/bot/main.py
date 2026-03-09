@@ -20,14 +20,16 @@ from src.handlers.help import router as help_router
 from src.handlers.settings import router as settings_router
 from src.handlers.stats import router as stats_router
 from src.handlers.upload import router as upload_router
+from src.handlers.chat import router as chat_router
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 dp.include_router(start_router)
 dp.include_router(help_router)
 dp.include_router(settings_router)
 dp.include_router(stats_router)
 dp.include_router(upload_router)
+dp.include_router(chat_router)
 
 async def on_startup():
     await database.db.create_pool()

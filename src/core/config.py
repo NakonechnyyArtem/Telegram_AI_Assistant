@@ -2,6 +2,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     BOT_TOKEN: str
+    GEMINI_API_KEY: str
     DB_HOST: str="localhost"
     DB_PORT: int=5432
     DB_USER: str="postgres"
